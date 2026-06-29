@@ -17,3 +17,9 @@ dist/
 
 # Logs
 *.log
+
+# Local Claude Code guidance (not shared)
+CLAUDE.md
+
+# JetBrains IDE
+.idea/
