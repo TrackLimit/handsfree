@@ -1,5 +1,7 @@
 # Handsfree
 
+**English** | [한국어](README.ko.md)
+
 Push-to-talk **local** speech-to-text for macOS. Hold a key, speak, release — your words are
 transcribed on-device and pasted at the cursor in whatever app is focused (terminal, editor,
 browser…). No audio ever leaves your machine.
@@ -90,6 +92,17 @@ is in the same menu.
 - **Quick test without building the app:** `uv run handsfree` — but note this dictates into the
   *launching terminal only* (macOS scopes the hotkey to the process unless it has the app's stable,
   signed identity). Use it for a fast check before granting the app permissions.
+
+## Uninstall
+
+```sh
+./packaging/uninstall.sh           # quit app, delete the bundle, clear permissions
+./packaging/uninstall.sh --model   # also delete the cached speech model (~442 MB)
+```
+
+This removes `~/Applications/Handsfree.app` and resets its Accessibility / Input Monitoring /
+Microphone permissions. The project folder is left in place — `rm -rf` the repo yourself if you
+no longer want the source.
 
 ## How it works
 
